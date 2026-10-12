@@ -1,0 +1,22 @@
+<!doctype html> <!-- HTML5 belge tipi -->
+<html lang="tr"> <!-- Türkçe sayfa -->
+<head> <!-- başlık bölümü -->
+  <meta charset="utf-8" /> <!-- karakter kodlaması -->
+  <style> /* popup stilleri */
+    body { font: 13px system-ui, sans-serif; width: 280px; margin: 12px; color: #202124; } /* genel yazı ve genişlik */
+    .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; background: #d93025; } /* bağlantı noktası (kırmızı) */
+    .on .dot { background: #1e8e3e; } /* bağlıyken yeşil */
+    input { width: 80px; } /* port kutusu genişliği */
+    button { margin-top: 6px; } /* buton boşluğu */
+    #err { color: #d93025; font-size: 12px; margin-top: 6px; } /* hata yazısı */
+  </style> <!-- stil sonu -->
+</head> <!-- head sonu -->
+<body> <!-- gövde -->
+  <h3 style="margin:0 0 8px">Flow MCP Bridge</h3> <!-- başlık -->
+  <div id="st"><span class="dot"></span><span id="txt">Kontrol ediliyor…</span></div> <!-- bağlantı durumu -->
+  <div id="err"></div> <!-- hata mesajı alanı -->
+  <div style="margin-top:10px">Port: <input id="port" type="number" /> <button id="save">Kaydet &amp; Bağlan</button></div> <!-- port ayarı -->
+  <button id="open">Flow'u aç</button> <!-- Flow'u açma butonu -->
+  <script src="popup.js"></script> <!-- popup betiği -->
+</body> <!-- gövde sonu -->
+</html> <!-- belge sonu -->

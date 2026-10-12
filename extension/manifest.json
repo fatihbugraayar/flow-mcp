@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Flow MCP Bridge",
+  "version": "1.0.0",
+  "description": "Google Flow'u yerel MCP sunucusu (flow-mcp) uzerinden yapay zeka asistanlarinin kontrol etmesini saglar.",
+  "permissions": ["tabs", "scripting", "storage", "alarms", "downloads", "debugger"],
+  "host_permissions": ["<all_urls>"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["https://flow.google.com/*", "https://labs.google/fx/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": { "default_title": "Flow MCP Bridge", "default_popup": "popup.html" }
+}

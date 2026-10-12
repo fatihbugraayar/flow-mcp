@@ -1,0 +1,23 @@
+{
+  "name": "flow-mcp",
+  "version": "1.0.0",
+  "description": "Google Flow (flow.google.com) icin MCP sunucusu + Chrome eklentisi koprusu",
+  "type": "module",
+  "main": "server/index.js",
+  "bin": {
+    "flow-mcp": "server/index.js"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "check": "node server/selftest.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "ws": "^8.22.0",
+    "zod": "^4.6.6"
+  }
+}
